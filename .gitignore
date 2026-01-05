@@ -1,0 +1,34 @@
+# Quartus II Generated Files
+db/
+incremental_db/
+output_files/
+simulation/
+work/
+
+# Quartus temporary files
+*.qws
+*.rpt
+*.summary
+*.done
+*.smsg
+*.pin
+*.jdi
+
+# Backup files
+*.bak
+*.orig
+
+# ModelSim/QuestaSim
+*.wlf
+*.vstf
+transcript
+
+# VCD waveforms
+*.vcd
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
