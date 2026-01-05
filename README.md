@@ -72,7 +72,7 @@ FinalPJ/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/iir-butterworth-filter.git
+   git clone https://github.com/HuuHoc2508/iir-butterworth-filter.git
    ```
 
 2. **Open in Quartus II**
