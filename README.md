@@ -6,7 +6,7 @@ Digital Implementation of 6th-Order Analog Butterworth Low-Pass Filter using Cas
 ![FPGA](https://img.shields.io/badge/Target-Cyclone%20II-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 🎯 Features
+## Features
 
 - **4-Stage Pipelined Architecture** for high Fmax
 - **Q11.20 Fixed-Point** precision (32-bit data, 20 fractional bits)  
@@ -16,7 +16,7 @@ Digital Implementation of 6th-Order Analog Butterworth Low-Pass Filter using Cas
 - **Overflow Detection** with sticky status flags
 - **Self-Checking Testbench** with automated pass/fail
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FinalPJ/
@@ -32,7 +32,7 @@ FinalPJ/
 └── FinalPJ.qpf/.qsf             # Quartus project files
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────┐
@@ -40,7 +40,7 @@ FinalPJ/
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │                     iir_top                          │  │
 │  │  ┌────────────┐  ┌────────────┐  ┌────────────┐      │  │
-│  │  │  SOS #1    │─▶│  SOS #2    │─▶│  SOS #3    │─▶ y│  │
+│  │  │  SOS #1    │─▶│  SOS #2    │─▶│  SOS #3    │─▶ y  │  │
 │  │  │ (Pipeline) │  │ (Pipeline) │  │ (Pipeline) │      │  │
 │  │  └────────────┘  └────────────┘  └────────────┘      │  │
 │  └──────────────────────────────────────────────────────┘  │
@@ -48,7 +48,7 @@ FinalPJ/
 └────────────────────────────────────────────────────────────┘
 ```
 
-## 📊 Synthesis Results (Cyclone II)
+## Synthesis Results (Cyclone II)
 
 | Resource | Utilization |
 |----------|-------------|
@@ -57,7 +57,7 @@ FinalPJ/
 | Clock Frequency | 50 MHz |
 | DSP Blocks | 0 (pure logic) |
 
-## 🔧 Wishbone Register Map
+## Wishbone Register Map
 
 | Address | Name | Access | Description |
 |---------|------|--------|-------------|
@@ -68,7 +68,7 @@ FinalPJ/
 | 0x24-0x34 | Section 2 | R/W | b0, b1, b2, a1, a2 |
 | 0x38-0x48 | Section 3 | R/W | b0, b1, b2, a1, a2 |
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone the repository**
    ```bash
@@ -86,14 +86,14 @@ FinalPJ/
    vsim -c iir_wishbone_tb -do "run -all"
    ```
 
-## 📐 Filter Specifications
+## Filter Specifications
 
 - **Type:** Butterworth Low-Pass
 - **Order:** 6th (3 × 2nd-order sections)
 - **Cutoff:** ~1% of sampling frequency (configurable)
 - **Precision:** Q11.20 fixed-point
 
-## 📄 License
+## License
 
 This project is open source under the MIT License.
 
